@@ -5,6 +5,6 @@ set -e
 
 script/bootstrap
 
-bundle exec gem build jekyll-auth.gemspec
+bundle exec gem build jekyll-auth-naked.gemspec
 
-bundle exec jekyll-auth --version
+bundle exec jekyll-auth-naked --version

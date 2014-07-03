@@ -1,4 +1,4 @@
-class JekyllAuth
+class JekyllAuthNaked
   class JekyllSite < Sinatra::Base
     register Sinatra::Index
     set :public_folder, '_site'
