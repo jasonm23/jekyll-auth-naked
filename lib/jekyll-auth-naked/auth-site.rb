@@ -32,7 +32,9 @@ class JekyllAuthNaked
     end
 
     post '/hook' do
-      puts PARAMS
+      request.body.rewind
+      data = JSON.parse request.body.read
+      puts data
     end
 
     get '/logout' do
