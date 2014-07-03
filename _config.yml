@@ -11,7 +11,7 @@ exclude:
   - readme.md
   - vendor
 
-jekyll_auth:
+jekyll_auth_naked:
   whitelist:
     - drafts?
   ssl: true
