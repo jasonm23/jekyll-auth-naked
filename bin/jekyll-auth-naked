@@ -2,7 +2,7 @@
 # Command-line interface for jekyll-auth-naked
 
 require 'rubygems'
-require 'activesupport/core_ext'
+require 'active_support/core_ext'
 require 'commander/import'
 require 'rake'
 require 'jekyll-auth-naked'
