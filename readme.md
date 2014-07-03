@@ -1,10 +1,9 @@
 # Jekyll Auth Naked
 
 A simple way to use GitHub OAuth to self-host a protected jekyll site
- to your GitHub organization
+to your GitHub organization
 
 [![Gem Version](https://badge.fury.io/rb/jekyll-auth-naked.png)](http://badge.fury.io/rb/jekyll-auth-naked)
-[![Build Status](https://travis-ci.org/jasonm23/jekyll-auth-naked.png?branch=master)](https://travis-ci.org/jasonm23/jekyll-auth-naked)
 
 ## The problem
 
