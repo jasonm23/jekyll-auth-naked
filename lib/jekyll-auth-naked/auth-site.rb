@@ -31,7 +31,7 @@ class JekyllAuthNaked
       end
     end
 
-    get '/hook' do
+    post '/hook' do
       puts PARAMS
     end
 
