@@ -1,7 +1,7 @@
 # Jekyll Auth Naked
 
-*A simple way to use GitHub OAuth to self-host a protected jekyll site
- to your GitHub organization*
+A simple way to use GitHub OAuth to self-host a protected jekyll site
+ to your GitHub organization
 
 [![Gem Version](https://badge.fury.io/rb/jekyll-auth-naked.png)](http://badge.fury.io/rb/jekyll-auth-naked)
 [![Build Status](https://travis-ci.org/jasonm23/jekyll-auth-naked.png?branch=master)](https://travis-ci.org/jasonm23/jekyll-auth-naked)
@@ -99,11 +99,19 @@ Want to run it locally? Just run `jekyll serve` as you would normally
 1. `export GITHUB_CLIENT_ID=[your github app client id]`
 2. `export GITHUB_CLIENT_SECRET=[your github app client secret]`
 3. `export GITHUB_ORG_ID=[org id]` or `export GITHUB_TEAM_ID=[team id]`
-4. `jekyll-auth serve`
+4. `jekyll-auth-naked serve`
 
-*Pro-tip #1:* For sanity sake, and to avoid problems with your callback URL, you may want to have two apps, one with a local oauth callback, and one for production if you're going to be testing auth locally.
+*Pro-tip #1:* For sanity sake, and to avoid problems with your
+ callback URL, you may want to have two apps, one with a local oauth
+ callback, and one for production if you're going to be testing auth
+ locally.
 
-*Pro-tip #2*: Jekyll Auth supports [dotenv](https://github.com/bkeepers/dotenv) out of the box. You can create a `.env` file in the root of site and add your configuration variables there. It's ignored by `.gitignore` if you use `jekyll-auth new`, but be sure not to accidentally commit your `.env` file. Here's what your `.env` file might look like:
+*Pro-tip #2*: Jekyll Auth Naked supports
+ [dotenv](https://github.com/bkeepers/dotenv) out of the box. You can
+ create a `.env` file in the root of site and add your configuration
+ variables there. It's ignored by `.gitignore` if you use `jekyll-auth
+ new`, but be sure not to accidentally commit your `.env` file. Here's
+ what your `.env` file might look like:
 
 ```
 GITHUB_CLIENT_SECRET=abcdefghijklmnopqrstuvwxyz0123456789
@@ -117,10 +125,6 @@ Every time you push to Github, you can send a webhook request to your
 jekyll blog, and it will update.
 
 ### Setting up Github Hooks
-
-TODO
-
-### Running as a service
 
 TODO
 
