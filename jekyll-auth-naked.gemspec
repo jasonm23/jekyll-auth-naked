@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
                              "lib/jekyll-auth-naked/version.rb", "lib/jekyll-auth-naked/config.rb", ".gitignore"]
   s.executables           = ["jekyll-auth-naked"]
   s.add_dependency("jekyll", "~> 2.0")
-  s.add_dependency("activesupport-core-ext", "~> 4.0")
+  s.add_dependency("activesupport", "~> 4.1")
   s.add_dependency("sinatra-index", "~> 0.0")
   s.add_dependency("sinatra_auth_github", "~> 1.0")
   s.add_dependency("commander", "~> 4.1")

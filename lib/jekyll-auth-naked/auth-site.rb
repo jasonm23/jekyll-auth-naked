@@ -2,7 +2,6 @@ class JekyllAuthNaked
   class AuthSite < Sinatra::Base
 
     require 'json'
-    require 'yaml'
     require 'openssl'
 
     # require ssl
@@ -38,20 +37,26 @@ class JekyllAuthNaked
     post '/hook' do
 
       secret = ENV['GITHUB_WEBHOOK_SECRET']
-      key = "sha1=#{OpenSSL::HMAC.hexdigest(HMAC_DIGEST, secret, request.body)}"
+      HMAC_DIGEST = OpenSSL::Digest.new('sha1')
+      body = request.body.read
+      key = "sha1=#{OpenSSL::HMAC.hexdigest(HMAC_DIGEST, secret, body)}"
 
       unless request.env['HTTP_X_HUB_SIGNATURE'] == key
         puts "Github webhook secret failed to match"
         halt 401
       end
 
-      puts " Hook -------------------------------------------------------- "
-      puts request.env.to_yaml
+      # For debugging
+      # puts " Hook -------------------------------------------------------- "
+      # puts request.env.to_yaml
 
-      puts " Request body ------------------------------------------------ "
-      request.body.rewind
-      data = JSON.parse request.body.read
-      puts data.to_yaml
+      # puts " Request body ------------------------------------------------ "
+      # request.body.rewind
+      # data = JSON.parse request.body.read
+      # puts data.to_yaml
+
+      system "git pull"
+      system "jekyll build"
 
     end
 
